@@ -56,6 +56,6 @@ function virusStats(d) {
 
 ## TODO
 
-- [] Add the abillity to search for a country (COuntry not hardcoded)
-- [] Add a link back to the [source code](https://github.com/Kvanrooyen/corona-tracker)
-- [] Log and catch erorrs better
+- [ ] Add the abillity to search for a country (COuntry not hardcoded)
+- [ ] Add a link back to the [source code](https://github.com/Kvanrooyen/corona-tracker)
+- [ ] Log and catch erorrs better
