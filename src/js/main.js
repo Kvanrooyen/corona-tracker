@@ -1,3 +1,15 @@
+/*
+TODO:
+  1. Create function to get what user inputed in the search bar after they press search
+  2. Replace space character with %20
+*/
+
+function getCountry(userInput) {
+  userInput = document.getElementById("countrySearch").value;
+  userInput.replace(/\s/g, "%20");
+  countryInfo(userInput);
+}
+
 function countryInfo(countryName) {
   fetch("https://corona.lmao.ninja/countries/" + countryName)
     .then(function(resp) {
@@ -10,10 +22,6 @@ function countryInfo(countryName) {
       // catch errors
     });
 }
-
-window.onload = function() {
-  countryInfo("ireland");
-};
 
 function virusStats(d) {
   document.getElementById("country").innerHTML = d.country;
