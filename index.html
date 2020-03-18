@@ -4,11 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/4d82adefbf.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Corona Tracker</title>
   </head>
   <body>
-    <!-- Country, Total Cases, Cases Today, Deaths, Deaths Today -->
-    <div>
+    <div class="wrap">
+      <div class="search">
+        <!-- Search bar to choose country -->
+        <input
+          type="search"
+          id="countrySearch"
+          placeholder="Search for a country"
+        />
+        <button type="submit" class="searchButton">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <!-- Country, Total Cases, Cases Today, Deaths, Deaths Today -->
       <h1 id="country"></h1>
       <p id="casesTotal"></p>
       <p id="deathsTotal"></p>
