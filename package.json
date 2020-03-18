@@ -1,0 +1,26 @@
+{
+  "name": "corona-tracker",
+  "version": "1.0.0",
+  "description": "A simple site to track the number of cases of covid-19. One of the ideas behoned the project was so that I can improve my JavaScript skills.",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kvanrooyen/corona-tracker.git"
+  },
+  "author": "Keagan van Rooyen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kvanrooyen/corona-tracker/issues"
+  },
+  "homepage": "https://github.com/Kvanrooyen/corona-tracker#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}

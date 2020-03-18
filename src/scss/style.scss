@@ -1,12 +1,18 @@
+$font: Helvetica, Arial, sans-serif;
+$font-colour: #f2f2f2;
+$bg-colour: #212529;
+$heading-font-size: 5rem;
+$font-size: 1.2rem;
+
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: $font;
   height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f2f2f2;
-  background: #212529;
+  color: $font-colour;
+  background: $bg-colour;
 }
 
 .search {
@@ -23,17 +29,17 @@ body {
   height: 36px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: #9dbfaf;
-  background-color: #212529;
+  color: $font-colour;
+  background-color: $bg-colour;
 }
 
 .searchButton {
   width: 40px;
   height: 36px;
   border: 3px solid #fff;
-  background: #212529;
+  background: $bg-colour;
   text-align: center;
-  color: #fff;
+  color: $font-colour;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
@@ -41,12 +47,12 @@ body {
 
 h1 {
   margin: 0 auto;
-  font-size: 5rem;
+  font-size: $heading-font-size;
   text-align: center;
   text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.2);
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: $font-size;
   text-align: center;
 }
