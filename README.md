@@ -1,55 +1,33 @@
 # Covid-19 Tracker
 
-A simple site to track the number of cases of covid-19. One of the ideas behoned the project was so that I can improve my JavaScript skills.
+![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fcorona.lmao.ninja%2Fcountries)
 
-## How it works
+This is a simple project that will enable you to view some of the stats for covid-19. The main idea behind this project was for me to improve my JavaScript.
 
-The data used is taken from [worldometer](https://www.worldometers.info/coronavirus/) using the following [API](https://github.com/NovelCOVID/API). I use a simple function to fetch the data from the API and then have it converted to JSON, to make it easier to use.
+## Getting Started
 
-```js
-function countryInfo(countryName) {
-  fetch("https://corona.lmao.ninja/countries/" + countryName)
-    .then(function(resp) {
-      return resp.json();
-    }) //Converts the returned data to JSON
-    .then(function(data) {
-      virusStats(data);
-    })
-    .catch(function() {
-      // TODO: catch errors
-    });
-}
-```
+To get started with the project you will need to clone it to your local machine, or download the [zip](https://github.com/Kvanrooyen/corona-tracker/archive/master.zip)
 
-I then use another function, when the window loads, to choose the country. In the future this will be dynamic and not hard coded, giving the user the option to change the country.
+### Prerequists
 
-```js
-window.onload = function() {
-  countryInfo("ireland");
-};
-```
+You will need a few things installed on your machine before you can run the projecct, they are listed below:
 
-Finally I have one more function that adds the data to the relevant tag in the `index.html`
+- [NodeJS](https://nodejs.org/en/)
 
-```js
-function virusStats(d) {
-  document.getElementById("country").innerHTML = d.country;
-  document.getElementById("casesTotal").innerHTML = "Total Cases: " + d.cases;
-  document.getElementById("casesToday").innerHTML =
-    "Cases Today: " + d.todayCases;
-  document.getElementById("deathsTotal").innerHTML =
-    "Total Deaths: " + d.deaths;
-  document.getElementById("deathsToday").innerHTML =
-    "Deaths Today: " + d.todayDeaths;
-}
-```
+- [Gulp](https://gulpjs.com/docs/en/getting-started/quick-start)
 
-```html
-<div>
-  <h1 id="country"></h1>
-  <p id="casesTotal"></p>
-  <p id="deathsTotal"></p>
-  <p id="deathsToday"></p>
-  <p id="casesToday"></p>
-</div>
-```
+### Installing
+
+Once you have installed Node and Gulp, we can then install the dependancies required. Open a terminal window in the root of the project folder, and run the following command.
+
+`npm install`
+
+You should then have everything installed. If you run `npm start` it should then open a browser window with the home page.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
+
+## Accknowledgements
+
+This project would not be possible without [NovelCOVID](https://github.com/NovelCOVID), I am using their [API](https://github.com/NovelCOVID/API) to get the data you see.
