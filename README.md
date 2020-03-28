@@ -1,6 +1,7 @@
 # Covid-19 Tracker
 
-![Website](https://img.shields.io/website?down_message=offline&up_message=online&url=https%3A%2F%2Fcorona.lmao.ninja%2Fcountries)
+![Website](https://img.shields.io/website?down_message=DOWN&label=API&up_message=UP&url=https%3A%2F%2Fcorona.lmao.ninja%2Fcountries%3Fsort%3Dcases)
+![Website](https://img.shields.io/website?down_message=Offline&label=Website&up_message=Online&url=https%3A%2F%2Fkvanrooyen.github.io%2Fcorona-tracker%2F)
 
 This is a simple project that will enable you to view some of the stats for covid-19. The main idea behind this project was for me to improve my JavaScript.
 
