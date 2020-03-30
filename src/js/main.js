@@ -1,4 +1,4 @@
-fetch("https://corona.lmao.ninja/countries/?sort=cases")
+fetch("https://corona.lmao.ninja/countries/")
   .then(function(resp) {
     return resp.json();
   }) //Converts the returned data to JSON
@@ -16,11 +16,12 @@ function cardBlock(d) {
       `<div class="col s12 m6">` +
       '<div class="card blue-grey darken-1">' +
       `<div class="card-content white-text">` +
-      `<span class="card-title" id="country${j}"></span>` +
-      `<p id="cases${j}"></p>` +
-      `<p id="deaths${j}"></p>` +
-      `<p id="casesToday${j}"></p>` +
-      `<p id="deathsToday${j}"></p>` +
+      `<span class="card-title" id="country${j}"><img src="${d[j].countryInfo.flag}" class="ctryFlag"/> </span>` +
+      `<span id="cases${j}"></span>` +
+      `<span id="casesToday${j}" class="casesToday"></span>` +
+      `<br />` +
+      `<span id="deaths${j}"></span>` +
+      `<span id="deathsToday${j}" class="deathsToday"></span>` +
       `</div>` +
       `</div>` +
       `</li>`;
@@ -31,14 +32,14 @@ function cardBlock(d) {
 function virusStats(d) {
   // Loop through and iterate over the ID for both the HTMl and the JSON
   for (i = 0; i < noCtry; i++) {
-    document.getElementById(`country${i}`).innerHTML = d[i].country;
+    document.getElementById(`country${i}`).innerHTML += d[i].country;
     document.getElementById(`cases${i}`).innerHTML = `Cases: ${d[i].cases}`;
     document.getElementById(`deaths${i}`).innerHTML = `Deaths: ${d[i].deaths}`;
     document.getElementById(
       `casesToday${i}`
-    ).innerHTML = `Cases Today: ${d[i].todayCases}`;
+    ).innerHTML = ` (+${d[i].todayCases}) `;
     document.getElementById(
       `deathsToday${i}`
-    ).innerHTML = `Deaths Today: ${d[i].todayDeaths}`;
+    ).innerHTML = ` (${d[i].todayDeaths}) `;
   }
 }
