@@ -40,10 +40,10 @@ function virusStats(d) {
       `deaths${i}`
     ).innerHTML = `Total Deaths: ${formatNumber(d[i].deaths)}`;
     document.getElementById(`casesToday${i}`).innerHTML = formatNumber(
-      ` (+${d[i].todayCases}) `
+      ` (+ ${d[i].todayCases}) `
     );
     document.getElementById(`deathsToday${i}`).innerHTML = formatNumber(
-      ` (${d[i].todayDeaths}) `
+      ` (+ ${d[i].todayDeaths}) `
     );
   }
 }
