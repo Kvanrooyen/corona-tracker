@@ -12,7 +12,7 @@ function filterNames() {
   // Get lis from ul
   let li = ul.querySelectorAll("li.collection-item");
 
-  // Loop through collection-item lis
+  // Loop through collection-item list
   for (let i = 0; i < li.length; i++) {
     let a = li[i].getElementsByTagName("div")[0];
     // If matched

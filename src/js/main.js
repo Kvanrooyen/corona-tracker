@@ -1,8 +1,6 @@
-fetch("https://corona.lmao.ninja/countries/")
-  .then(function(resp) {
-    return resp.json();
-  }) //Converts the returned data to JSON
-  .then(function(data) {
+fetch("https://corona.lmao.ninja/countries/?sort=cases")
+  .then((resp) => resp.json()) //Converts the returned data to JSON
+  .then((data) => {
     cardBlock(data);
     virusStats(data);
   });
@@ -16,7 +14,7 @@ function cardBlock(d) {
       `<div class="col s12 m6">` +
       '<div class="card grey darken-3">' +
       `<div class="card-content white-text">` +
-      `<span class="card-title" id="country${j}"><img src="${d[j].countryInfo.flag}" class="ctryFlag"/> </span>` +
+      `<span class="card-title" id="country${j}"><img src="${d[j].countryInfo.flag}" class="ctryFlag" load="lazy"/> </span>` +
       `<span id="cases${j}" class="cases"></span>` +
       `<span id="casesToday${j}" class="casesToday cases"></span>` +
       `<br />` +
