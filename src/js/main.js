@@ -1,4 +1,4 @@
-fetch("https://corona.lmao.ninja/countries/?sort=cases")
+fetch("https://corona.lmao.ninja/v2/countries?sort=cases")
   .then((resp) => resp.json()) //Converts the returned data to JSON
   .then((data) => {
     cardBlock(data);
