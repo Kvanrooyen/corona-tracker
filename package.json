@@ -1,26 +1,38 @@
 {
-  "name": "corona-tracker",
-  "version": "1.0.0",
-  "description": "A simple site to track the number of cases of covid-19. One of the ideas behoned the project was so that I can improve my JavaScript skills.",
-  "main": "index.js",
+  "name": "corona",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
+  },
   "scripts": {
-    "start": "gulp watch"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kvanrooyen/corona-tracker.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "author": "Keagan van Rooyen",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Kvanrooyen/corona-tracker/issues"
-  },
-  "homepage": "https://github.com/Kvanrooyen/corona-tracker#readme",
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-csso": "^4.0.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
